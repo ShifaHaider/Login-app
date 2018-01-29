@@ -1,6 +1,4 @@
-//var data = document.getElementsByClassName('data');
-//var secData = document.getElementsByClassName('b');
-//var saveFirstData = [];
+
 var data = document.getElementsByClassName('data');
 var secData = document.getElementsByClassName('2-Data');
 var saveFirstData = JSON.parse(localStorage.getItem('saveFirstData')) || [] ;
@@ -13,24 +11,31 @@ function save() {
         data[i].value = '';
     }
 }
-
-
-
-//var userEmailAndPass = document.getElementById("userEmailAndPass")
-//var userEmailserPass = document.getElementById("userPass")
 function login (){
-for(var i= 0; i<secData.length; i++ ){
-     saveSecondData[i] = secData[i].value;
-     for(var j = 0; j <= saveSecondData.length;j++){
-         if( saveFirstData[i]===  saveSecondData[j]){
-             //alert("afaf")
+for(var i = 0; i < secData.length; i++ ) {
+    saveSecondData[i] = secData[i].value;
+    localStorage.setItem('saveFirstData', JSON.stringify(saveFirstData));
+    secData[i].value = '';
+        if (saveSecondData[i] == localStorage.getItem('saveFirstData')) {
+            alert('Wow!')
 
-
-         }
-     }
+    }
+}
 }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 //var a = document.getElementsByClassName('data');
 //var b = document.getElementsByClassName('2-Data');
 //var c = document.getElementById('last');
@@ -57,7 +62,6 @@ for(var i= 0; i<secData.length; i++ ){
 //
 //    console.log(saveData2);
 //}
-
 //function last(){
 //    for(var i = 0; i <4; i++) {
 //        var div = document.getElementsByTagName('div');
@@ -67,19 +71,3 @@ for(var i= 0; i<secData.length; i++ ){
 //        console.log(div);
 //    }
 //}
-function again() {
-    //var datas = false;
-    for (var j = 0; j < secData.length; j++) {
-        saveSecondData[j] = secData[j].value;
-        if (saveSecondData[j] === saveFirstData[j]) {
-            save();
-        }
-    }
-//if(datas){
-    //   alert('ok');
-    //}
-    //    else {
-    //        alert('Not ok');
-    secData[j].value = '';
-    console.log(saveSecondData);
-}
