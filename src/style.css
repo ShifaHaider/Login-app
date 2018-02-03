@@ -5,5 +5,17 @@
     border-radius: 3px;
     display: inline-block;
     margin: 5px;
-    padding: 15px;
+    padding: 10px 20px 20px 20px
+    ;
+
 }
+.data{
+    border-radius: 3px;
+    padding: 10px;
+    display: inline-block;
+}
+.secData{
+    border-radius: 3px;
+    padding: 10px;
+}
+
