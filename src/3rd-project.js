@@ -34,7 +34,10 @@ function login() {
     for (var j = 0; j < accounts.length; j++) {
         console.log(loginData);
         if (loginData.email === accounts[j].email && loginData.password === accounts[j].password) {
+            localStorage.setItem('userData' , JSON.stringify(accounts[j]));
+            alert('Welcome ' + accounts[j].name);
             console.log(logMatch);
+
             logMatch = true;
             break;
         }
