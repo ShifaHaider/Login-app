@@ -1,4 +1,5 @@
 var accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+
 function save() {
     var saveData1 =
     {
@@ -7,14 +8,12 @@ function save() {
         password: document.getElementById('password').value,
         phoneNumber: document.getElementById('phone').value
     };
-
     var isMatch = false;
     for (var i = 0; i < accounts.length; i++) {
         if (accounts[i].email === saveData1.email) {
             isMatch = true;
         }
     }
-
     if (isMatch) {
         alert('email is not available')
     }
@@ -22,9 +21,7 @@ function save() {
         accounts.push(saveData1);
         localStorage.setItem('accounts', JSON.stringify(accounts));
     }
-    console.log(accounts);
 }
-
 function login() {
     var loginData = {
         email: document.getElementById('logEmail').value,
@@ -37,7 +34,6 @@ function login() {
             localStorage.setItem('userData' , JSON.stringify(accounts[j]));
             alert('Welcome ' + accounts[j].name);
             console.log(logMatch);
-
             logMatch = true;
             break;
         }
@@ -46,5 +42,4 @@ function login() {
         alert('account not login');
     }
     console.log(logMatch);
-
 }

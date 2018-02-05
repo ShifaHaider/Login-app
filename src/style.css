@@ -1,21 +1,35 @@
-
 .div{
     width: 180px;
     border: 1px solid #000;
     border-radius: 3px;
     display: inline-block;
     margin: 5px;
-    padding: 10px 20px 20px 20px
-    ;
+    padding: 10px 20px 20px 20px;
+}
+input#name{
+    border-radius: 3px;
+    padding: 10px;
+}
+input#email{
+    border-radius: 3px;
+    padding: 10px;
+}
+input#password{
+    border-radius: 3px;
+    padding: 10px;
+}
+input#phone{
+    border-radius: 3px;
+    padding: 10px;
+}
+input#logEmail{
+    border-radius: 3px;
+    padding: 10px;
+}
+input#logPassword{
+    border-radius: 3px;
+    padding: 10px;
+}
 
-}
-.data{
-    border-radius: 3px;
-    padding: 10px;
-    display: inline-block;
-}
-.secData{
-    border-radius: 3px;
-    padding: 10px;
-}
+
 
